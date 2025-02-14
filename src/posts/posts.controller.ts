@@ -22,7 +22,7 @@ export class PostsController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const post = await this.postsService.findOne(+id);
+    const post = await this.postsService.findOne(id);
     if (!post) {
       throw new NotFoundException('Post not found');
     }

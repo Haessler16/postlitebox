@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MongooseModule } from '@nestjs/mongoose';
 import { PostsModule } from './posts/posts.module';
 
 @Module({
-  imports: [PostsModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://hae:0ISm10tLzv5nrfJI@cluster0.uqphq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    ),
+    PostsModule,
+  ],
 })
 export class AppModule {}
