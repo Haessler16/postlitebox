@@ -1,11 +1,11 @@
-import { IsOptional, IsPositive } from 'class-validator';
+import { IsOptional, IsDecimal } from 'class-validator';
 
 export class PaginationDto {
   @IsOptional()
-  @IsPositive()
+  @IsDecimal()
   limit: number = 10; // Default limit
 
   @IsOptional()
-  @IsPositive()
+  @IsDecimal()
   offset: number = 0; // Default offset
 }
