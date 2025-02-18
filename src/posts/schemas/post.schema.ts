@@ -4,6 +4,10 @@ import { Schema, Document } from 'mongoose';
 export class Post extends Document {
   title: string;
   image: string;
+  tags: string;
+  readTime: number;
+  authorName: string;
+  authorImage: string;
   createdAt: Date;
 }
 
@@ -11,6 +15,10 @@ export class Post extends Document {
 export const PostSchema = new Schema<Post>({
   title: { type: String, required: true },
   image: { type: String, required: true },
+  tags: { type: String, required: true },
+  readTime: { type: Number, required: true },
+  authorName: { type: String, required: true },
+  authorImage: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 
