@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## API Endpoint
+
+You can access and test this API at: https://postlitebox.onrender.com/
+
 ## Project setup
 
 ```bash
